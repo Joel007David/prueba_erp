@@ -1,6 +1,6 @@
 <?php
 
-include_once('bd/conexion.php');
+include_once('../../bd/conexion.php');
 
 ?>
 
@@ -13,11 +13,11 @@ include_once('bd/conexion.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="../../icono.png" type="image/x-icon" />
         <!-- END META SECTION -->
         
         <!-- CSS INCLUDE -->        
-        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+        <link rel="stylesheet" type="text/css" id="theme" href="../../css/theme-default.css"/>
         <!-- EOF CSS INCLUDE -->                                    
     </head>
     <body>
@@ -29,32 +29,32 @@ include_once('bd/conexion.php');
                 <!-- START X-NAVIGATION -->
                 <ul class="x-navigation">
                     <li class="xn-logo">
-                        <a href="panel.php">Software II</a>
+                        <a href="../../panel_admin.php">Software II</a>
                         <a href="#" class="x-navigation-control"></a>
                     </li>
                     <li class="xn-title">Navegacion</li>
                     <li class="active">
-                        <a href="panel.php"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
+                        <a href="../../panel_admin.php"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
                     </li>                    
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Planillas</span></a>
                         <ul>
-                            <li><a href="gestion_de_empleados.php"><span class="fa fa-image"></span> Gestión de Empleados</a></li>
-                            <li><a href="gestion_de_contratos.php"><span class="fa fa-user"></span> Gestión de Contratos</a></li>
-                            <li><a href="gestion_de_derechos_habientes.php"><span class="fa fa-users"></span> Gestión de Derechos Habientes</a></li>
-                            <li><a href="gestion_de_boletas.php"><span class="fa fa-users"></span> Gestión de Boletas</a></li>
-                            <li><a href="gestion_de_asistencias.php"><span class="fa fa-users"></span> Gestión de Asistencias</a></li>
-                            <li><a href="mantenimiento_planillas.php"><span class="fa fa-users"></span> Mantenimiento de Planillas</a></li>                        
+                            <li><a href="../planilla/gestion_de_empleados.php"><span class="fa fa-image"></span> Gestión de Empleados</a></li>
+                            <li><a href="../planilla/gestion_de_contratos.php"><span class="fa fa-user"></span> Gestión de Contratos</a></li>
+                            <li><a href="../planilla/gestion_de_derechos_habientes.php"><span class="fa fa-users"></span> Gestión de Derechos Habientes</a></li>
+                            <li><a href="../planilla/gestion_de_boletas.php"><span class="fa fa-users"></span> Gestión de Boletas</a></li>
+                            <li><a href="../planilla/gestion_de_asistencias.php"><span class="fa fa-users"></span> Gestión de Asistencias</a></li>
+                            <li><a href="../planilla/mantenimiento_planillas.php"><span class="fa fa-users"></span> Mantenimiento de Planillas</a></li>                        
                         </ul>
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Hotel</span></a>
                         <ul> 
-                            <li><a href="gestion_de_clientes.php"><span class="fa fa-user"></span> Gestión de Clientes</a></li>
-                            <li><a href="gestion_de_habitaciones.php"><span class="fa fa-users"></span> Gestión de Habitaciones</a></li>
-                            <li><a href="gestion_de_servicios.php"><span class="fa fa-users"></span> Gestión de Servicios</a></li>
+                            <li><a href="../hotel/gestion_de_clientes.php"><span class="fa fa-user"></span> Gestión de Clientes</a></li>
+                            <li><a href="../hotel/gestion_de_habitaciones.php"><span class="fa fa-users"></span> Gestión de Habitaciones</a></li>
+                            <li><a href="../hotel/gestion_de_servicios.php"><span class="fa fa-users"></span> Gestión de Servicios</a></li>
                             <li><a href="movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>
-                            <li><a href="mantenimiento_hotel.php"><span class="fa fa-users"></span> Mantenimiento del Hotel</a></li>                          
+                            <li><a href="../hotel/mantenimiento_hotel.php"><span class="fa fa-users"></span> Mantenimiento del Hotel</a></li>                          
                         </ul>
                     </li>
                     <li class="xn-openable">
@@ -253,7 +253,7 @@ include_once('bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Productos</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/producto.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/producto.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -286,7 +286,7 @@ include_once('bd/conexion.php');
                                                         <td><?php print $data_productos['Stock_Producto'] ?></td> 
                                                         <td><?php print $data_productos['Descripcion_Producto'] ?></td> 
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/producto.php?codigo=<?php echo $data_productos['Cod_Producto'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/producto.php?codigo=<?php echo $data_productos['Cod_Producto'] ?>'"   >
                                                     	<span class="fa fa-pencil"></span>
                                                     </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
@@ -329,7 +329,7 @@ include_once('bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Tipos de Productos</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/tipo_producto.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/tipo_producto.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -357,7 +357,7 @@ include_once('bd/conexion.php');
                                                         <td><?php print $data_tipos_productos['Tipo_Producto'] ?></td>
                                                 		<td><?php print $data_tipos_productos['Descripcion_Tipo_Producto'] ?></td>                                             
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/tipo_producto.php?codigo=<?php echo $data_tipos_productos['Cod_Tipo_Producto'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/tipo_producto.php?codigo=<?php echo $data_tipos_productos['Cod_Tipo_Producto'] ?>'"   >
                                                     	<span class="fa fa-pencil"></span>
                                                     </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
@@ -396,7 +396,7 @@ include_once('bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Marcas</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/marca.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/marca.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -424,7 +424,7 @@ include_once('bd/conexion.php');
                                                         <td><?php print $data_marca['Marca'] ?></td>                   
                                                         <td><?php print $data_marca['Descripcion_Marca'] ?></td>
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/marca.php?codigo=<?php echo $data_marca['Cod_Marca'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/marca.php?codigo=<?php echo $data_marca['Cod_Marca'] ?>'"   >
                                                                 <span class="fa fa-pencil"></span>
                                                             </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
@@ -461,7 +461,7 @@ include_once('bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Proveedores</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/proveedor.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/proveedor.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -492,7 +492,7 @@ include_once('bd/conexion.php');
                                                         <td><?php print $data_proveedores['Nombre_Compania_P'] ?></td>
                                                         <td><?php print $data_proveedores['Direccion_P'] ?></td>
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/proveedor.php?codigo=<?php echo $data_proveedores['Cod_Proveedor'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/proveedor.php?codigo=<?php echo $data_proveedores['Cod_Proveedor'] ?>'"   >
                                                                 <span class="fa fa-pencil"></span>
                                                             </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
@@ -546,43 +546,43 @@ include_once('bd/conexion.php');
         <!-- END MESSAGE BOX-->
 
         <!-- START PRELOADS -->
-        <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
-        <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
+        <audio id="audio-alert" src="../../audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="../../audio/fail.mp3" preload="auto"></audio>
         <!-- END PRELOADS -->                  
         
     <!-- START SCRIPTS -->
         <!-- START PLUGINS -->
-        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>                
+        <script type="text/javascript" src="../../js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="../../js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap.min.js"></script>                
         <!-- END PLUGINS -->
         
         <!-- THIS PAGE PLUGINS -->
-        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
-        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type='text/javascript' src='../../js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="../../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
         
-        <script type="text/javascript" src="js/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="../../js/plugins/datatables/jquery.dataTables.min.js"></script>
         
-        <script type='text/javascript' src='js/plugins/validationengine/languages/jquery.validationEngine-en.js'></script>
-        <script type='text/javascript' src='js/plugins/validationengine/jquery.validationEngine.js'></script>        
+        <script type='text/javascript' src='../../js/plugins/validationengine/languages/jquery.validationEngine-en.js'></script>
+        <script type='text/javascript' src='../../js/plugins/validationengine/jquery.validationEngine.js'></script>        
 
-        <script type='text/javascript' src='js/plugins/jquery-validation/jquery.validate.js'></script>                
+        <script type='text/javascript' src='../../js/plugins/jquery-validation/jquery.validate.js'></script>                
 
-        <script type='text/javascript' src='js/plugins/maskedinput/jquery.maskedinput.min.js'></script>
+        <script type='text/javascript' src='../../js/plugins/maskedinput/jquery.maskedinput.min.js'></script>
         
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-datepicker.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-timepicker.min.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-colorpicker.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-file-input.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-select.js"></script>
-        <script type="text/javascript" src="js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap-timepicker.min.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap-colorpicker.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap-file-input.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap-select.js"></script>
+        <script type="text/javascript" src="../../js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
         <!-- END THIS PAGE PLUGINS -->      
 
         <!-- START TEMPLATE -->
-        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="../../js/settings.js"></script>
         
-        <script type="text/javascript" src="js/plugins.js"></script>        
-        <script type="text/javascript" src="js/actions.js"></script>
+        <script type="text/javascript" src="../../js/plugins.js"></script>        
+        <script type="text/javascript" src="../../js/actions.js"></script>
         
         <!-- END TEMPLATE -->
     <!-- END SCRIPTS -->         

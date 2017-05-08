@@ -15,7 +15,7 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="../icono.png" type="image/x-icon" />
         <!-- END META SECTION -->
         
         <!-- CSS INCLUDE -->        
@@ -50,33 +50,33 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Planillas</span></a>
                         <ul>
-                            <li><a href="../gestion_de_empleados.php"><span class="fa fa-image"></span> Gestión de Empleados</a></li>
-                            <li><a href="../gestion_de_contratos.php"><span class="fa fa-user"></span> Gestión de Contratos</a></li>
-                            <li><a href="../gestion_de_derechos_habientes.php"><span class="fa fa-users"></span> Gestión de Derechos Habientes</a></li>
-                            <li><a href="../gestion_de_boletas.php"><span class="fa fa-users"></span> Gestión de Boletas</a></li>
-                            <li><a href="../gestion_de_asistencias.php"><span class="fa fa-users"></span> Gestión de Asistencias</a></li>
-                            <li><a href="../mantenimiento_planillas.php"><span class="fa fa-users"></span> Mantenimiento de Planillas</a></li>                        
+                            <li><a href="../pages/planilla/gestion_de_empleados.php"><span class="fa fa-image"></span> Gestión de Empleados</a></li>
+                            <li><a href="../pages/planilla/gestion_de_contratos.php"><span class="fa fa-user"></span> Gestión de Contratos</a></li>
+                            <li><a href="../pages/planilla/gestion_de_derechos_habientes.php"><span class="fa fa-users"></span> Gestión de Derechos Habientes</a></li>
+                            <li><a href="../pages/planilla/gestion_de_boletas.php"><span class="fa fa-users"></span> Gestión de Boletas</a></li>
+                            <li><a href="../pages/planilla/gestion_de_asistencias.php"><span class="fa fa-users"></span> Gestión de Asistencias</a></li>
+                            <li><a href="../pages/planilla/mantenimiento_planillas.php"><span class="fa fa-users"></span> Mantenimiento de Planillas</a></li>                        
                         </ul>
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Hotel</span></a>
                         <ul> 
-                            <li><a href="../gestion_de_clientes.php"><span class="fa fa-user"></span> Gestión de Clientes</a></li>
-                            <li><a href="../gestion_de_habitaciones.php"><span class="fa fa-users"></span> Gestión de Habitaciones</a></li>
-                            <li><a href="../gestion_de_servicios.php"><span class="fa fa-users"></span> Gestión de Servicios</a></li>
-                            <li><a href="../movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>
-                            <li><a href="../mantenimiento_hotel.php"><span class="fa fa-users"></span> Mantenimiento del Hotel</a></li>                       
+                            <li><a href="../pages/hotel/gestion_de_clientes.php"><span class="fa fa-user"></span> Gestión de Clientes</a></li>
+                            <li><a href="../pages/hotel/gestion_de_habitaciones.php"><span class="fa fa-users"></span> Gestión de Habitaciones</a></li>
+                            <li><a href="../pages/hotel/gestion_de_servicios.php"><span class="fa fa-users"></span> Gestión de Servicios</a></li>
+                            <li><a href="../pages/hotel//movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>
+                            <li><a href="../pages/hotel/mantenimiento_hotel.php"><span class="fa fa-users"></span> Mantenimiento del Hotel</a></li>                       
                         </ul>
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Supermercado</span></a>
                         <ul>
-                            <li><a href="../ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
-                            <li><a href="../compras.php"><span class="fa fa-user"></span> Compras</a></li>
-                            <li><a href="../gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
-                            <li><a href="../gestion_de_compras.php"><span class="fa fa-users"></span> Gestión de Compras</a></li>
-                            <li><a href="../mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
-                            <li><a href="../movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>                          
+                            <li><a href="../pages/supermercado/ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
+                            <li><a href="../pages/supermercado/compras.php"><span class="fa fa-user"></span> Compras</a></li>
+                            <li><a href="../pages/supermercado/gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
+                            <li><a href="../pages/supermercado/gestion_de_compras.php"><span class="fa fa-users"></span> Gestión de Compras</a></li>
+                            <li><a href="../pages/supermercado/mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
+                            <li><a href="../pages/supermercado/movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>                          
                         </ul>
                     </li>
                     <li class="xn-openable">
@@ -212,11 +212,11 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
         <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-select.js"></script>
         <script type="text/javascript" src="../js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
         
-        <script type='text/javascript' src='js/plugins/jquery-validation/jquery.validate.js'></script>  
+        <script type='text/javascript' src='../js/plugins/jquery-validation/jquery.validate.js'></script>  
         <!-- END THIS PAGE PLUGINS -->         
 
         <!-- START TEMPLATE -->
-        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="../js/settings.js"></script>
         
         <script type="text/javascript" src="../js/plugins.js"></script>        
         <script type="text/javascript" src="../js/actions.js"></script>        

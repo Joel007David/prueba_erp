@@ -3,6 +3,14 @@ include_once ('../bd/conexion.php');
 
 $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
 
+if($codigo != ''){
+	$sql = "CALL PA_Buscar_Empleado_Codigo({$_GET['codigo']})";
+	$execute = $mysqli->query($sql);
+	$mysqli->close();
+	$data = mysqli_fetch_array($execute);
+}else{
+	header();	
+}
 
 ?>
 
@@ -10,24 +18,24 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
 <html lang="en">
     <head>        
         <!-- META SECTION -->
-        <title><?php if($codigo == ''){ echo 'Nuevo Área'; }else{ echo 'Modificar Área'; } ?></title>            
+        <title>TITLE</title>            
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <link rel="icon" href="../icono.png" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <!-- END META SECTION -->
         
         <!-- CSS INCLUDE -->        
         <link rel="stylesheet" type="text/css" id="theme" href="../css/theme-default.css"/>
         <!-- EOF CSS INCLUDE -->
         <style>
-			input:focus,textarea:focus {
-				border: 4px solid #389879;
-  				background: #389879;	
+		/*
+			.campos {
+				border-color:#389879;	
 			}
-		
-
+			
+		*/
 		</style>
         
     </head>
@@ -50,33 +58,33 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Planillas</span></a>
                         <ul>
-                            <li><a href="../pages/planilla/gestion_de_empleados.php"><span class="fa fa-image"></span> Gestión de Empleados</a></li>
-                            <li><a href="../pages/planilla/gestion_de_contratos.php"><span class="fa fa-user"></span> Gestión de Contratos</a></li>
-                            <li><a href="../pages/planilla/gestion_de_derechos_habientes.php"><span class="fa fa-users"></span> Gestión de Derechos Habientes</a></li>
-                            <li><a href="../pages/planilla/gestion_de_boletas.php"><span class="fa fa-users"></span> Gestión de Boletas</a></li>
-                            <li><a href="../pages/planilla/gestion_de_asistencias.php"><span class="fa fa-users"></span> Gestión de Asistencias</a></li>
-                            <li><a href="../pages/planilla/mantenimiento_planillas.php"><span class="fa fa-users"></span> Mantenimiento de Planillas</a></li>                        
+                            <li><a href="../gestion_de_empleados.php"><span class="fa fa-image"></span> Gestión de Empleados</a></li>
+                            <li><a href="../gestion_de_contratos.php"><span class="fa fa-user"></span> Gestión de Contratos</a></li>
+                            <li><a href="../gestion_de_derechos_habientes.php"><span class="fa fa-users"></span> Gestión de Derechos Habientes</a></li>
+                            <li><a href="../gestion_de_boletas.php"><span class="fa fa-users"></span> Gestión de Boletas</a></li>
+                            <li><a href="../gestion_de_asistencias.php"><span class="fa fa-users"></span> Gestión de Asistencias</a></li>
+                            <li><a href="../mantenimiento_planillas.php"><span class="fa fa-users"></span> Mantenimiento de Planillas</a></li>                        
                         </ul>
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Hotel</span></a>
                         <ul> 
-                            <li><a href="../pages/hotel/gestion_de_clientes.php"><span class="fa fa-user"></span> Gestión de Clientes</a></li>
-                            <li><a href="../pages/hotel/gestion_de_habitaciones.php"><span class="fa fa-users"></span> Gestión de Habitaciones</a></li>
-                            <li><a href="../pages/hotel/gestion_de_servicios.php"><span class="fa fa-users"></span> Gestión de Servicios</a></li>
-                            <li><a href="../pages/hotel//movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>
-                            <li><a href="../pages/hotel/mantenimiento_hotel.php"><span class="fa fa-users"></span> Mantenimiento del Hotel</a></li>                       
+                            <li><a href="../gestion_de_clientes.php"><span class="fa fa-user"></span> Gestión de Clientes</a></li>
+                            <li><a href="../gestion_de_habitaciones.php"><span class="fa fa-users"></span> Gestión de Habitaciones</a></li>
+                            <li><a href="../gestion_de_servicios.php"><span class="fa fa-users"></span> Gestión de Servicios</a></li>
+                            <li><a href="../movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>
+                            <li><a href="../mantenimiento_hotel.php"><span class="fa fa-users"></span> Mantenimiento del Hotel</a></li>                          
                         </ul>
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Supermercado</span></a>
                         <ul>
-                            <li><a href="../pages/supermercado/ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
-                            <li><a href="../pages/supermercado/compras.php"><span class="fa fa-user"></span> Compras</a></li>
-                            <li><a href="../pages/supermercado/gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
-                            <li><a href="../pages/supermercado/gestion_de_compras.php"><span class="fa fa-users"></span> Gestión de Compras</a></li>
-                            <li><a href="../pages/supermercado/mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
-                            <li><a href="../pages/supermercado/movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>                          
+                            <li><a href="../ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
+                            <li><a href="../compras.php"><span class="fa fa-user"></span> Compras</a></li>
+                            <li><a href="../gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
+                            <li><a href="../gestion_de_compras.php"><span class="fa fa-users"></span> Gestión de Compras</a></li>
+                            <li><a href="../mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
+                            <li><a href="../movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>                          
                         </ul>
                     </li>
                     <li class="xn-openable">
@@ -108,63 +116,31 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
                 
                 <!-- START BREADCRUMB -->
                 <ul class="breadcrumb">
-                    <li><a href="../pages/planilla/mantenimiento_planillas.php">Mantenimiento de Planillas</a></li>                    
-                    <li class="active"><?php if($codigo == ''){ echo 'Nuevo Área'; }else{ echo 'Modificar Área'; } ?></li>
+                    <li><a href="../gestion_de_empleados.php">Gestión de Empleados</a></li>                    
+                    <li class="active">Perfil del Empleado</li>
                 </ul>
                 <!-- END BREADCRUMB -->                
                 
                 <div class="page-title">  
-                	<?php
-					if($codigo == ''){
-					?>                  
-                    	<h2><span class="fa fa-arrow-circle-o-left"></span> Ingresar una nueva Área</h2>
-                    <?php
-						$enlace = 'i';
-					}else{
-					?>
-						<h2><span class="fa fa-arrow-circle-o-left"></span> Modificar Área</h2>
-                    <?php
-						$mysqli = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
-						$sql = "CALL PA_Buscar_Servicio_Codigo({$_GET['codigo']})";
-						$execute = $mysqli->query($sql);
-						$mysqli->close();
-						$data = mysqli_fetch_array($execute);
-						$enlace = "m&&codigo=".$data['Cod_Servicio'];
-					}
-					?>
+
+						<h2><span class="fa fa-arrow-circle-o-left"></span> Perfil de <?php echo  $data['Nombres'].' '.$data['Apellido_Paterno'].' '.$data['Apellido_Materno'] ?></h2>
+
                 </div>                   
                 
                 <!-- PAGE CONTENT WRAPPER -->
                 <div class="page-content-wrap">
                 
-                    <div class="row" >
-                    	<div class="col-md-2"></div>
-                        <div class="col-md-8" >
+                    <div class="row">
+                        <div class="col-md-6">
+							<div class="col-md-6">
+                            	
+							<div>   	
+                                
+                                
+                        </div>
+                        <div class="col-md-6">
 							
-                            <form method="post" action="../bd/phpbase.php?table=area&&tipo=<?php echo $enlace ?>" class="form-horizontal" name="area" role="form">
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">Área</label>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                                            <input type="text" class="form-control" name="area" value="<?php if($codigo != ''){ echo $data['Area']; } ?>" placeholder="Ingresar Nombre del Área" autofocus required/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">Descripcion del Área</label>
-                                    <div class="col-md-6">
-                                        <textarea class="form-control" name="descripcion_area" rows="5" placeholder="Ingrese una Descripcion del Área"><?php if($codigo != ''){ echo $data['Descripcion_Area']; } ?></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-lg-1" align="left">
-                                    <button type="reset" class="btn btn-default" style="border-color:#389879;" >Limpiar Formulario</button>
-                                </div>
-                                <div align="right">
-                                    <button type="submit" class="btn btn-info" >Guardar Cambios</button>
-                                </div>
-                            </form>
-                     
+                     	
                                 
                                 
                         </div>

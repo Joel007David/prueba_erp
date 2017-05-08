@@ -7,7 +7,7 @@ include_once('../../bd/conexion.php');
 <html lang="en">
     <head>        
         <!-- META SECTION -->
-        <title>Ventas</title>             
+        <title>Gestión de Empleados</title>             
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,12 +38,12 @@ include_once('../../bd/conexion.php');
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Planillas</span></a>
                         <ul>
-                            <li><a href="../planilla/gestion_de_empleados.php"><span class="fa fa-image"></span> Gestión de Empleados</a></li>
+                            <li><a href="gestion_de_empleados.php"><span class="fa fa-image"></span> Gestión de Empleados</a></li>
                             <li><a href="gestion_de_contratos.php"><span class="fa fa-user"></span> Gestión de Contratos</a></li>
                             <li><a href="gestion_de_derechos_habientes.php"><span class="fa fa-users"></span> Gestión de Derechos Habientes</a></li>
                             <li><a href="gestion_de_boletas.php"><span class="fa fa-users"></span> Gestión de Boletas</a></li>
                             <li><a href="gestion_de_asistencias.php"><span class="fa fa-users"></span> Gestión de Asistencias</a></li>
-                            <li><a href="../planilla/mantenimiento_planillas.php"><span class="fa fa-users"></span> Mantenimiento de Planillas</a></li>                        
+                            <li><a href="mantenimiento_planillas.php"><span class="fa fa-users"></span> Mantenimiento de Planillas</a></li>                        
                         </ul>
                     </li>
                     <li class="xn-openable">
@@ -59,11 +59,11 @@ include_once('../../bd/conexion.php');
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Supermercado</span></a>
                         <ul>
-                            <li><a href="../supermercado/ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
+                            <li><a href="ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
                             <li><a href="compras.php"><span class="fa fa-user"></span> Compras</a></li>
-                            <li><a href="../supermercado/gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
+                            <li><a href="gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
                             <li><a href="gestion_de_compras.php"><span class="fa fa-users"></span> Gestión de Compras</a></li>
-                            <li><a href="../supermercado/mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
+                            <li><a href="mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
                             <li><a href="movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>                          
                         </ul>
                     </li>
@@ -199,14 +199,14 @@ include_once('../../bd/conexion.php');
                 <!-- START BREADCRUMB -->
                 <ul class="breadcrumb">
                     <li><a href="panel.php">Dashboard</a></li>
-                    <li><a href="#">Supermercado</a></li>
-                    <li class="active">Ventas</li>
+                    <li><a href="#">Planillas</a></li>
+                    <li class="active">Gestión de Empleados</li>
                 </ul>
                 <!-- END BREADCRUMB -->
                 
                 <!-- PAGE TITLE -->
                 <div class="page-title">                    
-                    <h2><span class="fa fa-arrow-circle-o-left"></span> Ventas</h2>
+                    <h2><span class="fa fa-arrow-circle-o-left"></span> Gestión de Empleados</h2>
                 </div>
                 <!-- END PAGE TITLE -->                
                 
@@ -215,7 +215,70 @@ include_once('../../bd/conexion.php');
                 
                     <div class="row">
                     	<div class="col-md-12">
+							<!-- START DEFAULT DATATABLE -EMPLEADOS-- -->
+                            <div class="panel panel-info">
+                                <div class="panel-heading">                                
+                                    <h3 class="panel-title">Lista de Empleados</h3>
+                                    <ul class="panel-controls">
+                                    	<li><a href="../../form/empleado.php" class="" title="Nuevo" ><span class="fa fa-plus-square"></span></a></li>
+                                        <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                        <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+                                        <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
+                                    </ul>                                
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table datatable table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th width="">Nombres</th>
+                                                <th width="">Apellido_Paterno</th>
+                                                <th>Apellido_Materno</th>
+                                                <th>Dni</th>
+                                                <th>Email</th>
+                                                <th>Direccion</th>
+                                                <th width="">Opciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+											<?php
+											$mysqli = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
+											$sql = "CALL PA_Buscar_Empleado";
+											$execute = $mysqli->query($sql);
+											$mysqli->close();
+											while ($data_empleados = mysqli_fetch_array($execute)) {
+											?>
+                                            <tr>
+                                                <td><?php print $data_empleados['Nombres'] ?></td>
+                                                <td><?php print $data_empleados['Apellido_Paterno'] ?></td>
+                                                <td><?php print $data_empleados['Apellido_Materno'] ?></td>
+                                                <td><?php print $data_empleados['Dni'] ?></td> 
+                                                <td><?php print $data_empleados['Email'] ?></td> 
+                                                <td><?php print $data_empleados['Direccion'] ?></td> 
+                                                <td>
+                                                	<button class="btn btn-warning btn-rounded btn-sm" title="Editar" onClick="location='../../vistas/empleado.php?codigo=<?php echo $data_empleados['Cod_Persona'] ?>'"   >
+                                                    	<span class="fa fa-search-plus"></span>
+                                                    </button>
+                                                    <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/empleado.php?codigo=<?php echo $data_empleados['Cod_Persona'] ?>'"   >
+                                                    	<span class="fa fa-pencil"></span>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
+                                                </td>
+                                            </tr>                                         
+											<?php												
+											}
+											?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- END DEFAULT DATATABLE -->
+                        </div>
                         
+                        
+
+                         
+                         
+                         
 
 
                     </div>
@@ -281,7 +344,7 @@ include_once('../../bd/conexion.php');
         <!-- END THIS PAGE PLUGINS -->       
         
         <!-- START TEMPLATE -->
-        <script type="text/javascript" src="../../js/settings.js"></script>
+        <script type="text/javascript" src="js/settings.js"></script>
         
         <script type="text/javascript" src="../../js/plugins.js"></script>        
         <script type="text/javascript" src="../../js/actions.js"></script>        

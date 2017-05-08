@@ -1,6 +1,6 @@
 <?php
 
-include_once('bd/conexion.php');
+include_once('../../bd/conexion.php');
 
 ?>
 
@@ -13,11 +13,11 @@ include_once('bd/conexion.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="../../icono.png" type="image/x-icon" />
         <!-- END META SECTION -->
         
         <!-- CSS INCLUDE -->        
-        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+        <link rel="stylesheet" type="text/css" id="theme" href="../../css/theme-default.css"/>
         <!-- EOF CSS INCLUDE -->                                    
     </head>
     <body>
@@ -29,12 +29,12 @@ include_once('bd/conexion.php');
                 <!-- START X-NAVIGATION -->
                 <ul class="x-navigation">
                     <li class="xn-logo">
-                        <a href="panel.php">Software II</a>
+                        <a href="../../panel_admin.php">Software II</a>
                         <a href="#" class="x-navigation-control"></a>
                     </li>
                     <li class="xn-title">Navegacion</li>
                     <li class="active">
-                        <a href="panel.php"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
+                        <a href="../../panel_admin.php"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
                     </li>                    
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Planillas</span></a>
@@ -50,21 +50,21 @@ include_once('bd/conexion.php');
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Hotel</span></a>
                         <ul> 
-                            <li><a href="gestion_de_clientes.php"><span class="fa fa-user"></span> Gestión de Clientes</a></li>
-                            <li><a href="gestion_de_habitaciones.php"><span class="fa fa-users"></span> Gestión de Habitaciones</a></li>
-                            <li><a href="gestion_de_servicios.php"><span class="fa fa-users"></span> Gestión de Servicios</a></li>
-                            <li><a href="movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>
-                            <li><a href="mantenimiento_hotel.php"><span class="fa fa-users"></span> Mantenimiento del Hotel</a></li>                          
+                            <li><a href="../hotel/gestion_de_clientes.php"><span class="fa fa-user"></span> Gestión de Clientes</a></li>
+                            <li><a href="../hotel/gestion_de_habitaciones.php"><span class="fa fa-users"></span> Gestión de Habitaciones</a></li>
+                            <li><a href="../hotel/gestion_de_servicios.php"><span class="fa fa-users"></span> Gestión de Servicios</a></li>
+                            <li><a href="../hotel/movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>
+                            <li><a href="../hotel/mantenimiento_hotel.php"><span class="fa fa-users"></span> Mantenimiento del Hotel</a></li>                          
                         </ul>
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Supermercado</span></a>
                         <ul>
-                            <li><a href="ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
-                            <li><a href="compras.php"><span class="fa fa-user"></span> Compras</a></li>
-                            <li><a href="gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
+                            <li><a href="../supermercado/ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
+                            <li><a href="../supermercado/compras.php"><span class="fa fa-user"></span> Compras</a></li>
+                            <li><a href="../supermercado/gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
                             <li><a href="gestion_de_compras.php"><span class="fa fa-users"></span> Gestión de Compras</a></li>
-                            <li><a href="mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
+                            <li><a href="../supermercado/mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
                             <li><a href="movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>                          
                         </ul>
                     </li>
@@ -340,7 +340,7 @@ include_once('bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Cargos</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/cargo.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/cargo.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -368,7 +368,7 @@ include_once('bd/conexion.php');
                                                         <td><?php print $data_cargos['Cargo'] ?></td>
                                                 		<td><?php print $data_cargos['Area'] ?></td>                                             
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/cargo.php?codigo=<?php echo $data_cargos['Cod_Area'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/cargo.php?codigo=<?php echo $data_cargos['Cod_Area'] ?>'"   >
                                                     	<span class="fa fa-pencil"></span>
                                                     </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
@@ -407,7 +407,7 @@ include_once('bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Tipo de Contratos</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/tipo_contrato.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/tipo_contrato.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -434,7 +434,7 @@ include_once('bd/conexion.php');
                                                     <tr>
                                                         <td><?php print $data_tipo_contrato['Tipo_Contrato'] ?></td>                                            			<td><?php print $data_tipo_contrato['Descripcion_Tipo_Contrato'] ?></td>
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/tipo_contrato.php?codigo=<?php echo $data_tipo_contrato['Cod_Tipo_Contrato'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/tipo_contrato.php?codigo=<?php echo $data_tipo_contrato['Cod_Tipo_Contrato'] ?>'"   >
                                                                 <span class="fa fa-pencil"></span>
                                                             </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
@@ -471,7 +471,7 @@ include_once('bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Aseguradoras de Salud</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/aseguradora_salud.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/aseguradora_salud.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -500,7 +500,7 @@ include_once('bd/conexion.php');
                                                         <td><?php print $data_aseguradora_salud['Aseguradora_de_Salud'] ?></td>                                            			<td><?php print $data_aseguradora_salud['Descripcion_Aseguradora_de_Salud'] ?></td>
                                                         <td><?php print $data_aseguradora_salud['Porcentaje_Cobro_Aseguradora_de_Salud'] ?></td>
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/aseguradora_salud.php?codigo=<?php echo $data_aseguradora_salud['Cod_Aseguradora_de_Salud'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/aseguradora_salud.php?codigo=<?php echo $data_aseguradora_salud['Cod_Aseguradora_de_Salud'] ?>'"   >
                                                                 <span class="fa fa-pencil"></span>
                                                             </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
@@ -537,7 +537,7 @@ include_once('bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Afps</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/afp.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/afp.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -567,7 +567,7 @@ include_once('bd/conexion.php');
                                                         <td><?php print $data_afp['Descripcion_Afp'] ?></td>
                                                         <td><?php print $data_afp['Porcentaje_Cobro_Afp'] ?></td>
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/afp.php?codigo=<?php echo $data_afp['Cod_Afp'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/afp.php?codigo=<?php echo $data_afp['Cod_Afp'] ?>'"   >
                                                                 <span class="fa fa-pencil"></span>
                                                             </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
@@ -604,7 +604,7 @@ include_once('bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Condiciones de Empleados</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/condicion_empleado.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/condicion_empleado.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -632,7 +632,7 @@ include_once('bd/conexion.php');
                                                         <td><?php print $data_condicion_empleado['Condicion_Empleado'] ?></td>                  					
                                                         <td><?php print $data_condicion_empleado['Descripcion_Condicion_Empleado'] ?></td>
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/condicion_empleado.php?codigo=<?php echo $data_condicion_empleado['Cod_Condicion_Empleado'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/condicion_empleado.php?codigo=<?php echo $data_condicion_empleado['Cod_Condicion_Empleado'] ?>'"   >
                                                                 <span class="fa fa-pencil"></span>
                                                             </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
@@ -669,7 +669,7 @@ include_once('bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Parentescos</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/parentesco.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/parentesco.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -695,7 +695,7 @@ include_once('bd/conexion.php');
                                                     <tr>
                                                         <td><?php print $data_parentescos['Parentesco'] ?></td>
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/parentesco.php?codigo=<?php echo $data_parentescos['Cod_Parentesco'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/parentesco.php?codigo=<?php echo $data_parentescos['Cod_Parentesco'] ?>'"   >
                                                                 <span class="fa fa-pencil"></span>
                                                             </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
@@ -732,7 +732,7 @@ include_once('bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Turnos</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/turno.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/turno.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -764,7 +764,7 @@ include_once('bd/conexion.php');
                                                         <td><?php print $data_turnos['Hora_Fin'] ?></td>
                                                         <td><?php print $data_turnos['Observacion_Turno'] ?></td>
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/turno.php?codigo=<?php echo $data_turnos['Cod_Turno'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/turno.php?codigo=<?php echo $data_turnos['Cod_Turno'] ?>'"   >
                                                                 <span class="fa fa-pencil"></span>
                                                             </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
@@ -817,43 +817,43 @@ include_once('bd/conexion.php');
         <!-- END MESSAGE BOX-->
 
         <!-- START PRELOADS -->
-        <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
-        <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
+        <audio id="audio-alert" src="../audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="../audio/fail.mp3" preload="auto"></audio>
         <!-- END PRELOADS -->                  
         
     <!-- START SCRIPTS -->
         <!-- START PLUGINS -->
-        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>                
+        <script type="text/javascript" src="../../js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="../../js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap.min.js"></script>                
         <!-- END PLUGINS -->
         
         <!-- THIS PAGE PLUGINS -->
-        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
-        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type='text/javascript' src='../../js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="../../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
         
-        <script type="text/javascript" src="js/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="../../js/plugins/datatables/jquery.dataTables.min.js"></script>
         
-        <script type='text/javascript' src='js/plugins/validationengine/languages/jquery.validationEngine-en.js'></script>
-        <script type='text/javascript' src='js/plugins/validationengine/jquery.validationEngine.js'></script>        
+        <script type='text/javascript' src='../../js/plugins/validationengine/languages/jquery.validationEngine-en.js'></script>
+        <script type='text/javascript' src='../../js/plugins/validationengine/jquery.validationEngine.js'></script>        
 
-        <script type='text/javascript' src='js/plugins/jquery-validation/jquery.validate.js'></script>                
+        <script type='text/javascript' src='../../js/plugins/jquery-validation/jquery.validate.js'></script>                
 
-        <script type='text/javascript' src='js/plugins/maskedinput/jquery.maskedinput.min.js'></script>
+        <script type='text/javascript' src='../../js/plugins/maskedinput/jquery.maskedinput.min.js'></script>
         
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-datepicker.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-timepicker.min.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-colorpicker.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-file-input.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-select.js"></script>
-        <script type="text/javascript" src="js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap-timepicker.min.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap-colorpicker.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap-file-input.js"></script>
+        <script type="text/javascript" src="../../js/plugins/bootstrap/bootstrap-select.js"></script>
+        <script type="text/javascript" src="../../js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
         <!-- END THIS PAGE PLUGINS -->      
 
         <!-- START TEMPLATE -->
-        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="../../js/settings.js"></script>
         
-        <script type="text/javascript" src="js/plugins.js"></script>        
-        <script type="text/javascript" src="js/actions.js"></script>
+        <script type="text/javascript" src="../../js/plugins.js"></script>        
+        <script type="text/javascript" src="../../js/actions.js"></script>
         
         <!-- END TEMPLATE -->
     <!-- END SCRIPTS -->         
