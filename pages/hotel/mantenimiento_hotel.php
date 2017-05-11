@@ -29,12 +29,12 @@ include_once('../../bd/conexion.php');
                 <!-- START X-NAVIGATION -->
                 <ul class="x-navigation">
                     <li class="xn-logo">
-                        <a href="../../panel_admin.php">Software II</a>
+                        <a href="panel.php">Software II</a>
                         <a href="#" class="x-navigation-control"></a>
                     </li>
                     <li class="xn-title">Navegacion</li>
                     <li class="active">
-                        <a href="../../panel_admin.php"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
+                        <a href="panel.php"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
                     </li>                    
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Planillas</span></a>
@@ -44,7 +44,7 @@ include_once('../../bd/conexion.php');
                             <li><a href="gestion_de_derechos_habientes.php"><span class="fa fa-users"></span> Gestión de Derechos Habientes</a></li>
                             <li><a href="gestion_de_boletas.php"><span class="fa fa-users"></span> Gestión de Boletas</a></li>
                             <li><a href="gestion_de_asistencias.php"><span class="fa fa-users"></span> Gestión de Asistencias</a></li>
-                            <li><a href="../planilla/mantenimiento_planillas.php"><span class="fa fa-users"></span> Mantenimiento de Planillas</a></li>                        
+                            <li><a href="mantenimiento_planillas.php"><span class="fa fa-users"></span> Mantenimiento de Planillas</a></li>                        
                         </ul>
                     </li>
                     <li class="xn-openable">
@@ -60,11 +60,11 @@ include_once('../../bd/conexion.php');
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Supermercado</span></a>
                         <ul>
-                            <li><a href="../supermercado/ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
-                            <li><a href="../supermercado/compras.php"><span class="fa fa-user"></span> Compras</a></li>
+                            <li><a href="ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
+                            <li><a href="compras.php"><span class="fa fa-user"></span> Compras</a></li>
                             <li><a href="gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
                             <li><a href="gestion_de_compras.php"><span class="fa fa-users"></span> Gestión de Compras</a></li>
-                            <li><a href="../supermercado/mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
+                            <li><a href="mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
                             <li><a href="movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>                          
                         </ul>
                     </li>
@@ -199,8 +199,8 @@ include_once('../../bd/conexion.php');
 
                 <!-- START BREADCRUMB -->
                 <ul class="breadcrumb">
-                    <li><a href="#">Home</a></li>                    
-                    <li class="active">Dashboard</li>
+                    <li><a href="../../panel_admin.php">Dashboard</a></li>                    
+                    <li class="active"> Mantenimiento del Hotel</li>
                 </ul>
                 <!-- END BREADCRUMB -->                       
                 
@@ -550,7 +550,7 @@ include_once('../../bd/conexion.php');
         
         <!-- THIS PAGE PLUGINS -->
         <script type='text/javascript' src='../../js/plugins/icheck/icheck.min.js'></script>
-        <script type="../../text/javascript" src="../../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="../../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
         
         <script type="text/javascript" src="../../js/plugins/datatables/jquery.dataTables.min.js"></script>
         

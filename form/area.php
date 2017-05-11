@@ -23,7 +23,7 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
         <!-- EOF CSS INCLUDE -->
         <style>
 			input:focus,textarea:focus {
-				border: 4px solid #389879;
+				border: 3px solid #389879;
   				background: #389879;	
 			}
 		
@@ -125,11 +125,11 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
 						<h2><span class="fa fa-arrow-circle-o-left"></span> Modificar Área</h2>
                     <?php
 						$mysqli = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
-						$sql = "CALL PA_Buscar_Servicio_Codigo({$_GET['codigo']})";
+						$sql = "CALL PA_Buscar_Area_Codigo({$_GET['codigo']})";
 						$execute = $mysqli->query($sql);
 						$mysqli->close();
 						$data = mysqli_fetch_array($execute);
-						$enlace = "m&&codigo=".$data['Cod_Servicio'];
+						$enlace = "m&&codigo=".$data['Cod_Area'];
 					}
 					?>
                 </div>                   
@@ -141,7 +141,7 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
                     	<div class="col-md-2"></div>
                         <div class="col-md-8" >
 							
-                            <form method="post" action="../bd/phpbase.php?table=area&&tipo=<?php echo $enlace ?>" class="form-horizontal" name="area" role="form">
+                            <form method="post" action="../bd/phpbase.php?table=area&&tipo=<?php echo $enlace ?>" class="form-horizontal" id="form_area" name="area" role="form">
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Área</label>
                                     <div class="col-md-6">
@@ -218,56 +218,29 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
         <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-select.js"></script>
         <script type="text/javascript" src="../js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
         
-        <script type='text/javascript' src='js/plugins/jquery-validation/jquery.validate.js'></script>  
+        <script type='text/javascript' src='../js/plugins/jquery-validation/jquery.validate.js'></script>  
         <!-- END THIS PAGE PLUGINS -->         
 
         <!-- START TEMPLATE -->
-        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="../js/settings.js"></script>
         
         <script type="text/javascript" src="../js/plugins.js"></script>        
         <script type="text/javascript" src="../js/actions.js"></script>        
         <!-- END TEMPLATE -->
         
         <script type="text/javascript">
-            var jvalidate = $("#jvalidate").validate({
+            var jvalidate = $("#form_area").validate({
                 ignore: [],
                 rules: {                                            
-                        login: {
+                        area: {
                                 required: true,
-                                minlength: 2,
-                                maxlength: 8
+                                minlength: 3,
+                                maxlength: 20
                         },
-                        password: {
+                        descripcion_area: {
                                 required: true,
-                                minlength: 5,
-                                maxlength: 10
-                        },
-                        're-password': {
-                                required: true,
-                                minlength: 5,
-                                maxlength: 10,
-                                equalTo: "#password2"
-                        },
-                        age: {
-                                required: true,
-                                min: 18,
-                                max: 100
-                        },
-                        email: {
-                                required: true,
-                                email: true
-                        },
-                        date: {
-                                required: true,
-                                date: true
-                        },
-                        credit: {
-                                required: true,
-                                creditcard: true
-                        },
-                        site: {
-                                required: true,
-                                url: true
+                                minlength: 3,
+                                maxlength: 120
                         }
                     }                                        
                 });                                    

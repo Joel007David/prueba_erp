@@ -40,7 +40,7 @@ switch($table) {
 		break;
 	case 'turno':
 	
-		header('Location: ../mantenimiento_planillas.php');
+		header('Location: ../pages/planilla/mantenimiento_planillas.php');
 		$turno = isset($_POST['turno']) ? $_POST['turno'] : NULL;
 		$hora_inicio_turno = isset($_POST['hora_inicio_turno']) ? $_POST['hora_inicio_turno'] : NULL;
 		$hora_fin_turno = isset($_POST['hora_fin_turno']) ? $_POST['hora_fin_turno'] : NULL;
@@ -59,7 +59,7 @@ switch($table) {
 		break;
 	case 'area':
 		
-		header('Location: ../mantenimiento_planillas.php');
+		header('Location: ../pages/planilla/mantenimiento_planillas.php');
 		$area = isset($_POST['area']) ? $_POST['area'] : NULL;
 		$descripcion_area = isset($_POST['descripcion_area']) ? $_POST['descripcion_area'] : NULL;
 		
@@ -76,7 +76,7 @@ switch($table) {
 		break;
 	case 'cargo':
 		
-		header('Location: ../mantenimiento_planillas.php');
+		header('Location: ../pages/planilla/mantenimiento_planillas.php');
         $cod_area = isset($_POST['cod_area']) ? $_POST['cod_area'] : NULL; echo $cod_area;
 		$cargo = isset($_POST['cargo']) ? $_POST['cargo'] : NULL; echo $cargo;
 		
@@ -93,7 +93,7 @@ switch($table) {
 		break;
 	case 'tipo_contrato':
 		
-		header('Location: ../mantenimiento_planillas.php');
+		header('Location: ../pages/planilla/mantenimiento_planillas.php');
 		$tipo_contrato = isset($_POST['tipo_contrato']) ? $_POST['tipo_contrato'] : NULL;
 		$descripcion_tipo_contrato = isset($_POST['descripcion_tipo_contrato']) ? $_POST['descripcion_tipo_contrato'] : NULL;
 		
@@ -110,7 +110,7 @@ switch($table) {
 		break;
 	case 'condicion_empleado':
 		
-		header('Location: ../mantenimiento_planillas.php');
+		header('Location: ../pages/planilla/mantenimiento_planillas.php');
 		$condicion_empleado = isset($_POST['condicion_empleado']) ? $_POST['condicion_empleado'] : NULL;
 		$descripcion_condicion_empelado = isset($_POST['descripcion_condicion_empelado']) ? $_POST['descripcion_condicion_empelado'] : NULL;
 		
@@ -127,7 +127,7 @@ switch($table) {
 		break;
 	case 'aseguradora_de_salud':
 		
-		header('Location: ../mantenimiento_planillas.php');
+		header('Location: ../pages/planilla/mantenimiento_planillas.php');
 		$aseguradora_de_salud = isset($_POST['aseguradora_de_salud']) ? $_POST['aseguradora_de_salud'] : NULL;
 		$descripcion_aseguradora_de_salud = isset($_POST['descripcion_aseguradora_de_salud']) ? $_POST['descripcion_aseguradora_de_salud'] : NULL;
         $porcentaje_cobro_aseguradora_de_salud = isset($_POST['porcentaje_cobro_aseguradora_de_salud']) ? $_POST['porcentaje_cobro_aseguradora_de_salud'] : NULL;
@@ -145,7 +145,7 @@ switch($table) {
 		break;
 	case 'afp':
 		
-		header('Location: ../mantenimiento_planillas.php');
+		header('Location: ../pages/planilla/mantenimiento_planillas.php');
 		$afp = isset($_POST['afp']) ? $_POST['afp'] : NULL;
 		$descripcion_afp = isset($_POST['descripcion_afp']) ? $_POST['descripcion_afp'] : NULL;
         $porcentaje_cobro_afp = isset($_POST['porcentaje_cobro_afp']) ? $_POST['porcentaje_cobro_afp'] : NULL;
@@ -162,7 +162,7 @@ switch($table) {
 
 		break;
 	case 'empleado':
-		header('Location: ../gestion_de_empleados.php');
+		header('Location: ../pages/planilla/gestion_de_empleados.php');
         $cod_ciudad_nacimiento = isset($_POST['cod_ciudad_nacimiento']) ? $_POST['cod_ciudad_nacimiento'] : NULL;
         $cod_ciudad_direccion = isset($_POST['cod_ciudad_direccion']) ? $_POST['cod_ciudad_direccion'] : NULL;
         $cod_estado_civil = isset($_POST['cod_estado_civil']) ? $_POST['cod_estado_civil'] : NULL;
@@ -218,7 +218,7 @@ switch($table) {
 		
 		break;
 	case 'cliente':
-		header('Location: ../gestion_de_clientes.php');
+		header('Location: ../pages/hotel/gestion_de_clientes.php');
         $cod_ciudad_nacimiento = isset($_POST['cod_ciudad_nacimiento']) ? $_POST['cod_ciudad_nacimiento'] : NULL;
         $cod_ciudad_direccion = isset($_POST['cod_ciudad_direccion']) ? $_POST['cod_ciudad_direccion'] : NULL;
         $cod_estado_civil = isset($_POST['cod_estado_civil']) ? $_POST['cod_estado_civil'] : NULL;
@@ -273,7 +273,7 @@ switch($table) {
 		break;
 	case 'parentesco':
 		
-		header('Location: ../mantenimiento_planillas.php');
+		header('Location: ../pages/planilla/mantenimiento_planillas.php');
 		$parentesco = isset($_POST['parentesco']) ? $_POST['parentesco'] : NULL;
 
 		$mysqli = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
@@ -322,7 +322,7 @@ switch($table) {
 		break;
 	case 'detalle_condicion_empleado':
 				
-		header('Location: ../mantenimiento_planillas.php');
+		header('Location: ../pages/planilla/mantenimiento_planillas.php');
         $cod_persona = isset($_POST['cod_persona']) ? $_POST['cod_persona'] : NULL;
         $cod_condicion_empelado = isset($_POST['cod_condicion_empelado']) ? $_POST['cod_condicion_empelado'] : NULL;
         $fecha_inicio_dce = isset($_POST['fecha_inicio_dce']) ? $_POST['fecha_inicio_dce'] : NULL;
@@ -473,7 +473,7 @@ switch($table) {
 		break;
 	case 'tipo_habitacion':
 		
-		header('Location: ../mantenimiento_hotel.php');
+		header('Location: ../pages/hotel/mantenimiento_hotel.php');
         $tipo_habitacion = isset($_POST['tipo_habitacion']) ? $_POST['tipo_habitacion'] : NULL;
         
 		$mysqli = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
@@ -489,7 +489,7 @@ switch($table) {
 		break;
 	case 'habitacion':
 		
-		header('Location: ../mantenimiento_hotel.php');
+		header('Location: ../pages/hotel/mantenimiento_hotel.php');
         $num_habitacion = isset($_POST['num_habitacion']) ? $_POST['num_habitacion'] : NULL;
 		$piso = isset($_POST['piso']) ? $_POST['piso'] : NULL;
 		$detalle_habitacion = isset($_POST['detalle_habitacion']) ? $_POST['detalle_habitacion'] : NULL;
@@ -548,7 +548,7 @@ switch($table) {
 		break;
     case 'servicio':
 	
-		header('Location: ../mantenimiento_hotel.php');
+		header('Location: ../pages/hotel/mantenimiento_hotel.php');
 		$servicio = isset($_POST['servicio']) ? $_POST['servicio'] : NULL;
 		$precio_servicio = isset($_POST['precio_servicio']) ? $_POST['precio_servicio'] : NULL;
 		
@@ -772,7 +772,7 @@ switch($table) {
 		break;
 	case 'tipo_producto':
         
-		header('Location: ../mantenimiento_supermercado.php');
+		header('Location: ../pages/supermercado/mantenimiento_supermercado.php');
         $tipo_producto = isset($_POST['tipo_producto']) ? $_POST['tipo_producto'] : NULL;
         $descripcion_tipo_producto = isset($_POST['descripcion_tipo_producto']) ? $_POST['descripcion_tipo_producto'] : NULL;
         
@@ -789,7 +789,7 @@ switch($table) {
 		break;
     case 'marca':
 		
-		header('Location: ../mantenimiento_supermercado.php');
+		header('Location: ../pages/supermercado/mantenimiento_supermercado.php');
         $marca = isset($_POST['marca']) ? $_POST['marca'] : NULL;
         $descripcion_marca = isset($_POST['descripcion_marca']) ? $_POST['descripcion_marca'] : NULL;
         
@@ -806,7 +806,7 @@ switch($table) {
 		break;
     case 'producto':
 		
-		header('Location: ../mantenimiento_supermercado.php');
+		header('Location: ../pages/supermercado/mantenimiento_supermercado.php');
         $cod_tipo_producto = isset($_POST['cod_tipo_producto']) ? $_POST['cod_tipo_producto'] : NULL; 		
         $cod_marca = isset($_POST['cod_marca']) ? $_POST['cod_marca'] : NULL;							
         $producto = isset($_POST['producto']) ? $_POST['producto'] : NULL;						
@@ -838,7 +838,7 @@ switch($table) {
 		break;
 	case 'proveedores':
 		
-		header('Location: ../catalogo_de_proveedores.php');
+		header('Location: ../pages/supermercado/catalogo_de_proveedores.php');
         $cod_ciudad_p = isset($_POST['cod_ciudad_p']) ? $_POST['cod_ciudad_p'] : NULL;
         $ruc_p = isset($_POST['ruc_p']) ? $_POST['ruc_p'] : NULL;
         $nombre_compania_p = isset($_POST['nombre_compania_p']) ? $_POST['nombre_compania_p'] : NULL;

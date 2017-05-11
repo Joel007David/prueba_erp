@@ -12,7 +12,7 @@ include_once('../../bd/conexion.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="../../icono.png" type="image/x-icon" />
         <!-- END META SECTION -->
                         
         <!-- CSS INCLUDE -->        
@@ -49,22 +49,22 @@ include_once('../../bd/conexion.php');
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Hotel</span></a>
                         <ul> 
-                            <li><a href="gestion_de_clientes.php"><span class="fa fa-user"></span> Gestión de Clientes</a></li>
-                            <li><a href="gestion_de_habitaciones.php"><span class="fa fa-users"></span> Gestión de Habitaciones</a></li>
-                            <li><a href="gestion_de_servicios.php"><span class="fa fa-users"></span> Gestión de Servicios</a></li>
-                            <li><a href="movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>
-                            <li><a href="mantenimiento_hotel.php"><span class="fa fa-users"></span> Mantenimiento del Hotel</a></li>                          
+                            <li><a href="../hotel/gestion_de_clientes.php"><span class="fa fa-user"></span> Gestión de Clientes</a></li>
+                            <li><a href="../hotel/gestion_de_habitaciones.php"><span class="fa fa-users"></span> Gestión de Habitaciones</a></li>
+                            <li><a href="../hotel/gestion_de_servicios.php"><span class="fa fa-users"></span> Gestión de Servicios</a></li>
+                            <li><a href="../hotel/movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>
+                            <li><a href="../hotel/mantenimiento_hotel.php"><span class="fa fa-users"></span> Mantenimiento del Hotel</a></li>                          
                         </ul>
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Supermercado</span></a>
                         <ul>
-                            <li><a href="ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
-                            <li><a href="compras.php"><span class="fa fa-user"></span> Compras</a></li>
-                            <li><a href="gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
-                            <li><a href="gestion_de_compras.php"><span class="fa fa-users"></span> Gestión de Compras</a></li>
-                            <li><a href="mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
-                            <li><a href="movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>                          
+                            <li><a href="../supermercado/ventas.php"><span class="fa fa-image"></span> Ventas</a></li>
+                            <li><a href="../supermercado/compras.php"><span class="fa fa-user"></span> Compras</a></li>
+                            <li><a href="../supermercado/gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
+                            <li><a href="../supermercado/gestion_de_compras.php"><span class="fa fa-users"></span> Gestión de Compras</a></li>
+                            <li><a href="../supermercado/mantenimiento_supermercado.php"><span class="fa fa-users"></span> Mantenimiento de Supermercado</a></li> 
+                            <li><a href="../supermercado/movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>                          
                         </ul>
                     </li>
                     <li class="xn-openable">
@@ -198,7 +198,7 @@ include_once('../../bd/conexion.php');
                 
                 <!-- START BREADCRUMB -->
                 <ul class="breadcrumb">
-                    <li><a href="panel.php">Dashboard</a></li>
+                    <li><a href="../../panel.php">Dashboard</a></li>
                     <li><a href="#">Planillas</a></li>
                     <li class="active">Gestión de Empleados</li>
                 </ul>
@@ -344,7 +344,7 @@ include_once('../../bd/conexion.php');
         <!-- END THIS PAGE PLUGINS -->       
         
         <!-- START TEMPLATE -->
-        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="../js/settings.js"></script>
         
         <script type="text/javascript" src="../../js/plugins.js"></script>        
         <script type="text/javascript" src="../../js/actions.js"></script>        

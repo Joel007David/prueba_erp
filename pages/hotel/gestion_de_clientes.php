@@ -12,7 +12,7 @@ include_once('../../bd/conexion.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="../../icono.png" type="image/x-icon" />
         <!-- END META SECTION -->
                         
         <!-- CSS INCLUDE -->        
@@ -38,11 +38,11 @@ include_once('../../bd/conexion.php');
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Planillas</span></a>
                         <ul>
-                            <li><a href="gestion_de_empleados.php"><span class="fa fa-image"></span> Gestión de Empleados</a></li>
-                            <li><a href="gestion_de_planillas.php"><span class="fa fa-user"></span> Gestión de Planillas</a></li>
-                            <li><a href="gestion_de_asistencias.php"><span class="fa fa-users"></span> Gestión de Asistencias</a></li>
-                            <li><a href="gestion_de_boletas.php"><span class="fa fa-users"></span> Gestión de Boletas</a></li>
-                            <li><a href="mantenimiento.php"><span class="fa fa-users"></span> Mantenimiento</a></li>                        
+                            <li><a href="../planilla/gestion_de_empleados.php"><span class="fa fa-image"></span> Gestión de Empleados</a></li>
+                            <li><a href="../planilla/gestion_de_planillas.php"><span class="fa fa-user"></span> Gestión de Planillas</a></li>
+                            <li><a href="../planilla/gestion_de_asistencias.php"><span class="fa fa-users"></span> Gestión de Asistencias</a></li>
+                            <li><a href="../planilla/gestion_de_boletas.php"><span class="fa fa-users"></span> Gestión de Boletas</a></li>
+                            <li><a href="../planilla/mantenimiento.php"><span class="fa fa-users"></span> Mantenimiento</a></li>                        
                         </ul>
                     </li>
                     <li class="xn-openable">
@@ -57,11 +57,11 @@ include_once('../../bd/conexion.php');
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Supermercado</span></a>
                         <ul>
-                            <li><a href="catalogo_de_productos.php"><span class="fa fa-image"></span> Catalogo de Productos</a></li>
-                            <li><a href="catalogo_de_proveedores.php"><span class="fa fa-user"></span> Catalogo de Proveedores</a></li>
-                            <li><a href="gestion_de_compras.php"><span class="fa fa-users"></span> Gestión de Compras</a></li>
-                            <li><a href="gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
-                            <li><a href="movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>                          
+                            <li><a href="../supermercado/catalogo_de_productos.php"><span class="fa fa-image"></span> Catalogo de Productos</a></li>
+                            <li><a href="../supermercado/catalogo_de_proveedores.php"><span class="fa fa-user"></span> Catalogo de Proveedores</a></li>
+                            <li><a href="../supermercado/gestion_de_compras.php"><span class="fa fa-users"></span> Gestión de Compras</a></li>
+                            <li><a href="../supermercado/gestion_de_ventas.php"><span class="fa fa-users"></span> Gestión de Ventas</a></li>
+                            <li><a href="../supermercado/movimientos.php"><span class="fa fa-users"></span> Movimientos</a></li>                          
                         </ul>
                     </li>
                     <li class="xn-openable">

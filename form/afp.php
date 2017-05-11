@@ -26,7 +26,7 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
 				border: 4px solid #389879;
   				background: #389879;	
 			}
-		
+	
 
 		</style>
         
@@ -117,7 +117,7 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
                 	<?php
 					if($codigo == ''){
 					?>                  
-                    	<h2><span class="fa fa-arrow-circle-o-left"></span> Ingresar una nuevo Afp</h2>
+                    	<h2><span class="fa fa-arrow-circle-o-left"></span> Ingresar un Nuevo Afp</h2>
                     <?php
 						$enlace = 'i';
 					}else{
@@ -141,7 +141,7 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
                     	<div class="col-md-2"></div>
                         <div class="col-md-8" >
 							
-                            <form method="post" action="../bd/phpbase.php?table=afp&&tipo=<?php echo $enlace ?>" class="form-horizontal" name="afp" role="form">
+                            <form id="form_afp" method="post" action="../bd/phpbase.php?table=afp&&tipo=<?php echo $enlace ?>" class="form-horizontal" name="afp" role="form">
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Afp</label>
                                     <div class="col-md-6">
@@ -212,6 +212,17 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
         <!-- END PRELOADS -->                 
         
     <!-- START SCRIPTS -->
+    	<!-- plugin validador -->
+    	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+        <script>
+		  $.validate({
+			lang: 'es'
+		  });
+		</script>
+        <!-- end -->
+        
+        
         <!-- START PLUGINS -->
         <script type="text/javascript" src="../js/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="../js/plugins/jquery/jquery-ui.min.js"></script>
@@ -236,52 +247,6 @@ $codigo = isset($_GET['codigo']) ? isset($_GET['codigo']) : '';
         <script type="text/javascript" src="../js/plugins.js"></script>        
         <script type="text/javascript" src="../js/actions.js"></script>        
         <!-- END TEMPLATE -->
-        
-        <script type="text/javascript">
-            var jvalidate = $("#jvalidate").validate({
-                ignore: [],
-                rules: {                                            
-                        login: {
-                                required: true,
-                                minlength: 2,
-                                maxlength: 8
-                        },
-                        password: {
-                                required: true,
-                                minlength: 5,
-                                maxlength: 10
-                        },
-                        're-password': {
-                                required: true,
-                                minlength: 5,
-                                maxlength: 10,
-                                equalTo: "#password2"
-                        },
-                        age: {
-                                required: true,
-                                min: 18,
-                                max: 100
-                        },
-                        email: {
-                                required: true,
-                                email: true
-                        },
-                        date: {
-                                required: true,
-                                date: true
-                        },
-                        credit: {
-                                required: true,
-                                creditcard: true
-                        },
-                        site: {
-                                required: true,
-                                url: true
-                        }
-                    }                                        
-                });                                    
-
-        </script>
         
         
         

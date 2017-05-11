@@ -269,7 +269,7 @@ include_once('../../bd/conexion.php');
                                         <div class="panel-heading">                                
                                             <h3 class="panel-title">Lista de Areas</h3>
                                             <ul class="panel-controls">
-                                                <li><a href="form/area.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
+                                                <li><a href="../../form/area.php" class="" title="Nuevo"><span class="fa fa-plus-square"></span></a></li>
                                                 <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                                 <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
                                                 <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
@@ -297,7 +297,7 @@ include_once('../../bd/conexion.php');
                                                         <td><?php print $data_areas['Area'] ?></td>
                                                         <td><?php print $data_areas['Descripcion_Area'] ?></td>                                             
                                                         <td>
-                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='form/area.php?codigo=<?php echo $data_areas['Cod_Area'] ?>'"   >
+                                                            <button class="btn btn-info btn-rounded btn-sm" title="Editar" onClick="location='../../form/area.php?codigo=<?php echo $data_areas['Cod_Area'] ?>'"   >
                                                     	<span class="fa fa-pencil"></span>
                                                     </button>
                                                             <button class="btn btn-danger btn-rounded btn-sm" title="Suprimir" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
